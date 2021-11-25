@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <title>| web_test - main |</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <nav class = "nav_bar">
+      <img src = "data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 102 28'><path fill='%2314a800' d='M28.18 19.06A6.54 6.54 0 0123 16c.67-5.34 2.62-7 5.2-7s4.54 2 4.54 5-2 5-4.54 5m0-13.34a7.77 7.77 0 00-7.9 6.08 26 26 0 01-1.93-5.62H12v7.9c0 2.87-1.3 5-3.85 5s-4-2.12-4-5v-7.9H.49v7.9A8.61 8.61 0 002.6 20a7.27 7.27 0 005.54 2.35c4.41 0 7.5-3.39 7.5-8.24V8.77a25.87 25.87 0 003.66 8.05L17.34 28h3.72l1.29-7.92a11 11 0 001.36 1 8.32 8.32 0 004.14 1.28h.34A8.1 8.1 0 0036.37 14a8.12 8.12 0 00-8.19-8.31M80.8 7.86V6.18h-3.6v15.63h3.65v-6.12c0-3.77.34-6.48 5.4-6.13V6c-2.36-.18-4.2.31-5.45 1.87M55.51 6.17l-2.64 10.94-2.82-10.94h-4.64l-2.82 10.94-2.64-10.94h-3.69l4.05 15.65h4.38l3.04-11.11 3.01 11.11h4.38L59.4 6.17h-3.89zM67.42 19.07c-2.59 0-4.53-2.05-4.53-5s2-5 4.53-5S72 11 72 14s-2 5-4.54 5m0-13.35A8.1 8.1 0 0059.25 14a8.18 8.18 0 1016.35 0 8.11 8.11 0 00-8.18-8.31M91.47 14.13h.84l5.09 7.69h4.11l-5.85-8.53a7.66 7.66 0 004.74-7.11h-3.63c0 3.37-2.66 4.65-5.3 4.65V0h-3.65v21.82h3.64z'/></svg>" id = "uw_logo">
+      <ul class="nav_menu">
+        <li class="nav_menu_li" id ="nav_menu_li01">Log In</li>
+        <li>
+          <button class="nav_menu_li" id = "nav_menu_li02">Get started</button></li>
+    </nav>
+    
+  </head>
+    
+  <body>
+    <div class = "title_and_button">
+      <h3>Build your business with top freelancers</h3>
+      <p id="subtitle">Post a job for free and connect with independent talent today.</p>
+      <!-- <form action=""> -->
+      <div id = "GS_button"><button class = "button" id = "Get_Started" onclick="fnMove('1')" >Get Started</button></div>
+    
+    </div>
+    <div class = "tai_block">
+      <div class = "text_and_icons">
+          <div id = "text_trust">
+            <h6>Trusted by</h6>
+          </div>
+          <hr id = "tai_hr">
+          <div class = "icons_brand">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/microsoft.a4ac95d5ccec.svg" class = "icon_img1">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/airbnb.b562d9384414.svg" class = "icon_img1">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/ge.e4f1cdee0840.svg" class = "icon_img1">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/automattic.6156771b8b38.svg" class = "icon_img2">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/bissell.5f96ccb29685.svg" class = "icon_img3">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/coty.355301af207c.svg" class = "icon_img3">
+          </div>
+      </div>
+    </div>
+    
+    
+    <div class = "Hire_for">
+      <div class = 'hire_tab'>
+        <div class = "hire_text">
+          <h4>Hire for any scope of work</h4>
+        </div>
+  
+        <div class = "hire_boxes">
+          <div class = "box">
+            <hr id="box_hr">
+            <p id="box_title">Short-term projects</p>
+            <p id="box_sub">Find go-to talent who your needs<a>
+          </div>
+          <hr class = "hb_hr">
+          <div class = "box">
+            <hr id="box_hr">
+            <p id="box_title">Recurring engagements</p>
+            <p id="box_sub">Build trusted relationships with skilled professionals<a>
+          </div>
+          <hr class = "hb_hr">
+          <div class = "box">
+            <hr id="box_hr">
+            <p id="box_title">Long-term work</p>
+            <p id="box_sub">Expand your organization's capabilities<a>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+            
+          
+    <div class = "Find_freelance"></div>
+      <div class = "find_freelance_boxing">
+        <h4 id="find_text">Find freelance talent to take on any project</h4>
+        
+        <div class = "box_peoples">
+          {%for f in fuser_obj%}
+          <div class = "BOXP" id = "BOXP01">
+            
+            <div class = 'box_pp_nw'>
+
+              <div class = 'photo_and_pay'>
+                <img data-qa = "img" src="/static/img/profile_temp.jpg" class="photo" id="fuser_img">
+                <p data-qa="dollar" class="dollar"><span id="dollar_bold">${{f.fdollar}}</span><small>/hr</small></p>
+              </div>
+
+              
+              <div class = 'name_and_work'>
+                <p data-value="name" class="name">{{f.fname}}</p>
+                <p data-value="work" class = "work">{{f.fwork}}</p>
+                <p data-value="success_and_job" class="success_and_job">
+                  <span data-value="success" class="success">{{f.fsuccess}}% SUCCESS</span>
+                  <span data-value="job" class="job"><small>({{f.fjob}} jobs)</small></span></p>
+                <p data-value="country" class = "country">{{f.fcountry}}</p>
+              </div>
+
+            </div>
+            <hr id='freelance_box_hr'>
+            <div class = 'box_ability'>
+              <span data-qa="ability_01" class = "b_ab">{{f.fability1}}</span>
+              <span data-qa="ability_02" class = "b_ab">{{f.fability2}}</span>
+              <span data-qa="ability_03" class = "b_ab">{{f.fability3}}</span>
+              <span data-qa="ability_04" class = "b_ab">{{f.fability4}}</span>
+            </div>
+
+            <div class = 'box_view_profile'>
+              <button type = "button" class = "view_profile_button">View Profile</button>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+        
+      </div>
+    </div>
+        
+    
+        
+        
+        
+    <div class = "How_it_works">
+      <div class = "how_it_boxing">
+        <h4 id="how_text">How it works</h4>
+        <div class="p_ul_li">
+          <div class='ul_li'>
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/bundles/upworkmarketingair2/hiw-air275/images/find.svg" class = 'how_img'>
+            <span><h5>1.Post a job(it's free)</h5>
+            <p class='how_sub'>Tell us what you need. Provide as many details as possible, but don’t worry about getting it perfect.</p></span>
+            <hr class = "how_hr">
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/bundles/upworkmarketingair2/hiw-air275/images/hire.svg" class = 'how_img'>
+            <span><h5>2.Talent comes to you</h5>
+            <p class='how_sub'>Get qualified proposals within 24 hours, and meet the candidates you're excited about.</p></span>
+          </div>
+          <div id='hr_s'>
+            <hr class = "how_hr">
+            <hr class = "how_hr_1920">
+          </div>
+          <div class='ul_li'>
+            <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/bundles/upworkmarketingair2/hiw-air275/images/work.svg" class = 'how_img'>
+            <span><h5>3.Collaborate easily</h5>
+            <p class='how_sub'>Use Upwork to chat or video call, share files, and track project progress right from the app.</p></span>
+            <hr class = "how_hr">
+            <img src="https://assets.static-upwork.com/assets/Adquiro/5c1555b/bundles/upworkmarketingair2/hiw-air275/images/pay.svg" class = 'how_img'>
+            <span><h5>4.Payment simplified</h5>
+            <p class='how_sub'>Receive invoices and make payments through Upwork. Only pay for work you authorize.</p></span>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class = "Microsoft">
+      <div class = "microsoft_in">
+        <img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/microsoft.0cc763c525a1.svg","https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/microsoft.0cc763c525a1.svg" class="ms_icon">
+        <p>One of the greatest advances of utilizing freelancers is finding a great variety of talent with different skills and bringing on new talent quickly as our needs change.</p>
+        <span id='ms_worker'>
+        <p id='photo_carol'><img src = "https://assets.static-upwork.com/assets/Adquiro/5c1555b/wp/images/carol.fee88fe635ba.jpg"></p>
+        <small><b>Carol Taylor</b><br>Director of Content Experience, Microsoft.</small>
+        </span>
+      </div>
+    </div>
+
+    
+
+
+    <div class = 'Sign_up' id='div1'>
+      <h4>Sign up for free project quotes</h4>
+      <div class="sign_up_box">
+
+        <div class="sign_up_google">
+        <div id="my-signin2"></div>
+        <script>
+          function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+          }
+          function onFailure(error) {
+            console.log(error);
+          }
+          function renderButton() {
+            gapi.signin2.render('my-signin2', {
+              'scope': 'profile email',
+              'width': 500,
+              'height': 50,
+              'longtitle': true,
+              'theme': 'dark',
+              'onsuccess': onSuccess,
+              'onfailure': onFailure,
+
+            });
+          }
+        </script>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+        </div>
+
+
+        <div class="or_hr">or</div>
+        <form action="" method="POST">
+          <div class="sign_up_uw">
+            <!-- <input type = "text" value="Work Email Adress" id="input_signup_email" onfocus="this.value='';return true;" /> -->
+            <input type = "button" value="Sing up with Email" id="button_signup_email" onclick="location.href='../signup'" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+  </body>
+  <footer>
+    <div class = "foot">
+      <div class = "looking">
+        <small><p>Looking to hire for long-term or full-time assignments? See how Upwork Payroll simplifies admin.<p>
+          <p>© 2015 - 2021 Upwork® Global Inc. • Privacy Policy</p></small>
+      </div>
+    </div>
+  </footer>
+</html>

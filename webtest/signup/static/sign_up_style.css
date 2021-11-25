@@ -1,0 +1,44 @@
+
+.box{
+    /* margin : 3vw 5vw; */
+    padding: 1.5vw;
+    /* background-color: #14a800; */
+    justify-content: center;
+    text-align: center;
+}
+
+.head_signup{
+    font-size: calc(20px+1.5vw);
+    font-family:'Rza';
+    margin:6.5vw 3vw 10px;
+    text-align: center;
+  }
+
+.django_form{
+    justify-content: center;
+    /* background-color: black; */
+    padding: 1.5vw;
+    text-align: center;
+}
+
+.account_submit{
+    justify-content: center;
+    text-align: center;
+}
+
+#button_submit{
+    width: 364px;
+    line-height: 50px;
+    list-style: none;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    background-color: #14a800;
+    color: #f0f0f0;
+    margin: 10px 3vw 5vw;
+}
+
+#button_submit:hover{
+    background-color:#3c8224;
+  }

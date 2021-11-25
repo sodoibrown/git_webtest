@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset = "UTF-8">
+    <title>| test_print.html |</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/test_style.css' %}">
+    <!-- <link rel="stylesheet" href="/test_style.css"> -->
+
+</head>
+
+<body>
+    
+
+
+
+
+
+    <h3>summary_</h3>
+    <div class="type">
+        <p>list_ctest : {{list_ctest}}</p>
+        <p>list_ftest : {{list_ftest}}</p>
+        <p>rst : {{rst}}</p>
+    </div>
+    <hr />
+
+
+
+
+    <h3>This is Using ORM</h3>(django model)
+    <p class="type">{{list_ctest}}</p>
+    
+    <div class="vertical">
+        {% for data in list_ctest %}
+        <div class="orm">
+        <ol>
+            <li>{{data}}</li>
+            <li>--- {{data.cname}}'s coutry: {{data.ccountry}}</li>
+            <li>--- {{data.cname}}'s age: {{data.cage}} years-old</li>
+        </ol>
+        </div>
+        {% endfor %}
+        {% for data in list_ctest %}
+        <div class="orm">
+        <ol>
+            <li>{{data}}</li>
+            <li>--- {{data.cname}}'s coutry: {{data.ccountry}}</li>
+            <li>--- {{data.cname}}'s age: {{data.cage}} years-old</li>
+        </ol>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+
+    <hr />
+    <h3>This is Using SQL</h3>(self class) (1)model.py : fuser -- fuser class
+    <p class="type">{{list_ftest}}</p>
+
+    <table border="1">
+
+        {% for k in list_ftest.rst %}
+        <p class="rst">{{k}}</p>
+        {% endfor %}
+    
+        <p>-------------------------------------------</p>
+    
+        <tr>
+        {%for fname in list_ftest.fname%}
+        <td>{{fname}}</td>
+        {% endfor %}
+        </tr>
+
+        <tr>
+        {%for fid in list_ftest.fid%}
+        <td>{{fid}}</td>
+        {% endfor %}
+        </tr>
+
+    </table>
+
+
+
+    <hr />
+    <h3>This is Using SQL</h3>(self class) (2)view.py : rst = cursor.fetchall() -- test_print def
+    <p class="type">{{rst}}</p>
+
+    {% for i in rst %}
+    <p class="rst">{{i}}</p>
+    {% endfor %}
+    
+    <p>-------------------------------------------</p>
+    
+    <table>
+    <tr><th>id</th><th>name</th><th>work</th>
+        <th>dollar(/h)</th><th>success(%)</th><th>jog(num)</th>
+        <th>country</th><th>ability1</th><th>ability2</th>
+        <th>ability3</th><th>ability4</th></tr>
+    {% for i in rst %}
+    <div>
+    <tr>
+        {% for d in i %}
+        <td>
+        <p>{{d}}</p>
+        </td>
+        {% endfor %}
+    </tr>
+    </div>
+
+    {% endfor %}
+    </table>
+</body>

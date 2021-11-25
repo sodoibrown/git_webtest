@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>| web_test - signup |</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'sign_up_style.css' %}">
+        <!-- <link rel="stylesheet" href="/static/sign_up_style.css"> -->
+    </head>
+    <body>
+        <div class = "box">
+        <form method="POST" action="/signup/success">{% csrf_token %} 
+                <div class="head_signup">
+                    <h3 class="complete_your">Complete your free account setup</h3>
+                    <!-- <p>__email__</p> -->
+                </div>
+
+                <div class="django_form">
+                    {{cuser_form.cname}}<br />
+                    {{cuser_form.cpassword}}<br />
+                    {{cuser_form.cemail}}<br />
+                    {{cuser_form.ccountry}}<br />
+                    <!-- {{cuser_form.password}} -->
+                </div>
+        
+                <div class = "account_submit">
+                    <input type="submit" value="Create My Account" id="button_submit" />
+                </div>
+        </form>
+        </div>
+
+
+<!-- 
+        <form action="", method="get">
+            <div class = "body_signup">
+                <div class = "input_user_info">
+                    
+                        <input type="text" value="name" name = "cname" required="required" />
+                        <input type="email" value="email" name = "cemail" required="required" />
+                        <input type="password" value="password" name = "cpassword" required="required" />
+                        <input type="text" value="country" name = "ccountry" />
+                
+                </div>
+                <div class = "radio_toggle">
+                    <input type="radio" name="user_cf" value="client" checked="checked" class="radio_cf" id="radio_cf_hire" />Hire
+                    <input type="radio" name="user_cf" value="freelancer" class="radio_cf" id="radio_cf_work" />Work
+                </div>
+                <div class = "agree_choose">
+                    <input type="checkbox" class="agree_check" /> Yes, Send me genuinely userful emails every now and then to help me get the most out of Upwork.
+                    <input type="checkbox" class="agree_check" /> Yes, I understand and agree to the Upwork Terms of Service, including the User Agreement and Privacy Policy.
+                </div>
+                <div class = "account_submit">
+                    <input type="submit" value="Create My Account" />
+                </div>
+            </div>
+        </form> -->
+    </body>
+
+</html>

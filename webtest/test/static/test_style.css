@@ -1,0 +1,29 @@
+.rst{
+    background-color: #414141;
+    color:white;
+}
+.type{
+    background-color: rgb(250, 19, 154);
+}
+.orm{
+    display:inline-block;
+    justify-content:space-between;
+    background-color:white;
+    border-radius:10px;
+    border: solid;
+    border-width:1px;
+    border-color:#d5e0d5;
+    margin-left:3vw;
+    width:220px;
+    height:280px;
+    padding:10px;
+}
+
+.vertical{
+    display:flex;
+    justify-content:flex-start;
+    width:100%;
+    text-align:left;
+    background-color:#f0f0f0;
+    margin-bottom:2.2vw;
+}
